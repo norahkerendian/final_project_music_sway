@@ -1,0 +1,94 @@
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .MxContainer,
+  .MyContainer {
+    display: flex;
+    justify-content: space-between; /* Aligns items side by side */
+    width: 90%; /* Makes the container take up 90% of the browser width */
+    margin: 10px;
+  }
+  
+  .MxPerson,
+  .MyPerson {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.1s; /* Smooth transition for rotation */
+  }
+  
+  .MxHead,
+  .MyHead {
+    width: 300px; /* Increased size of the head */
+    height: 300px; /* Increased size of the head */
+    background-color: transparent;
+    margin: 10px auto;
+  }
+  
+  .MxHead img,
+  .MyHead img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .arrow-ap {
+    position: absolute;
+    top: 45%; /* Raised the arrow vertically */
+    left: 50%; /* Position arrow in the center of the person */
+    width: 150px; /* Increased width of the arrow */
+    height: 4px; /* Thickness of the arrow line */
+    background-color: lightgreen;
+    transform-origin: center;
+    transform: translateX(-50%); /* Center the arrow line */
+  }
+
+  .line-through {
+    position: absolute;
+    top: 0;
+    left: 51%;
+    width: 2px;
+    height: 100%; /* Spans the whole height */
+    background-color: black;
+    transform: translateX(-50%); /* Center the line in the middle */
+  }
+  
+  .MxView,
+  .MyView,
+  .MxText,
+  .MyText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1; /* Allow both views to take equal space within the container */
+  }
+  
+  .MxText,
+  .MyText {
+    margin-left: 30px; /* Spacing between the text and views */
+    width: 35%; /* Set width for the text section */
+  }
+  
+  @media (max-width: 768px) {
+    .MxContainer,
+    .MyContainer {
+      flex-direction: column; /* Stack views vertically on smaller screens */
+      align-items: center;
+    }
+  
+    .MxText,
+    .MyText {
+      width: 90%; /* Full width for the text on smaller screens */
+      margin-left: 0; /* Reset the left margin */
+    }
+  
+    .MxPerson,
+    .MyPerson {
+      margin-bottom: 20px; /* Add spacing between front and side views */
+    }
+  }
+  
+  
+  
