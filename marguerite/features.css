@@ -20,39 +20,37 @@ h1 {
     transition: transform 0.1s; /* Smooth transition for rotation */
   }
   
-  .MxHead,
-  .MyHead {
-    width: 300px; /* Increased size of the head */
-    height: 300px; /* Increased size of the head */
-    background-color: transparent;
-    margin: 10px auto;
-  }
-  
-  .MxHead img,
-  .MyHead img {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .arrow-ap {
+  .MLaxis {
     position: absolute;
     top: 45%; /* Raised the arrow vertically */
     left: 50%; /* Position arrow in the center of the person */
     width: 150px; /* Increased width of the arrow */
     height: 4px; /* Thickness of the arrow line */
-    background-color: lightgreen;
+    background-color: red;
     transform-origin: center;
     transform: translateX(-50%); /* Center the arrow line */
   }
 
-  .line-through {
+  .APaxisFront {
     position: absolute;
-    top: 0;
-    left: 51%;
-    width: 2px;
-    height: 100%; /* Spans the whole height */
-    background-color: black;
-    transform: translateX(-50%); /* Center the line in the middle */
+    top: 45%; /* Raised the arrow vertically */
+    left: 42%; /* Position arrow in the center of the person */
+    width: 100px; /* Increased width of the arrow */
+    height: 4px; /* Thickness of the arrow line */
+    background-color: red;
+    transform-origin: center;
+    transform: translateX(-50%) rotate(-45deg); /* Center the arrow line */
+  }
+
+  .APaxisBack {
+    position: absolute;
+    top: 30%; /* Raised the arrow vertically */
+    left: 60%; /* Position arrow in the center of the person */
+    width: 100px; /* Increased width of the arrow */
+    height: 4px; /* Thickness of the arrow line */
+    background-color: red;
+    transform-origin: center;
+    transform: translateX(-50%) rotate(-45deg); /* Center the arrow line */
   }
   
   .MxView,
@@ -69,25 +67,6 @@ h1 {
   .MyText {
     margin-left: 30px; /* Spacing between the text and views */
     width: 35%; /* Set width for the text section */
-  }
-  
-  @media (max-width: 768px) {
-    .MxContainer,
-    .MyContainer {
-      flex-direction: column; /* Stack views vertically on smaller screens */
-      align-items: center;
-    }
-  
-    .MxText,
-    .MyText {
-      width: 90%; /* Full width for the text on smaller screens */
-      margin-left: 0; /* Reset the left margin */
-    }
-  
-    .MxPerson,
-    .MyPerson {
-      margin-bottom: 20px; /* Add spacing between front and side views */
-    }
   }
   
   
