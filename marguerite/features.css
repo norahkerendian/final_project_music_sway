@@ -4,7 +4,9 @@ h1 {
   }
   
   .MxContainer,
-  .MyContainer {
+  .MyContainer,
+  .CoPxContainer,
+  .CoPyContainer {
     display: flex;
     justify-content: space-between; /* Aligns items side by side */
     width: 90%; /* Makes the container take up 90% of the browser width */
@@ -26,7 +28,7 @@ h1 {
     left: 50%; /* Position arrow in the center of the person */
     width: 150px; /* Increased width of the arrow */
     height: 4px; /* Thickness of the arrow line */
-    background-color: red;
+    background-color: black;
     transform-origin: center;
     transform: translateX(-50%); /* Center the arrow line */
   }
@@ -37,7 +39,7 @@ h1 {
     left: 42%; /* Position arrow in the center of the person */
     width: 100px; /* Increased width of the arrow */
     height: 4px; /* Thickness of the arrow line */
-    background-color: red;
+    background-color: black;
     transform-origin: center;
     transform: translateX(-50%) rotate(-45deg); /* Center the arrow line */
   }
@@ -48,7 +50,7 @@ h1 {
     left: 60%; /* Position arrow in the center of the person */
     width: 100px; /* Increased width of the arrow */
     height: 4px; /* Thickness of the arrow line */
-    background-color: red;
+    background-color: black;
     transform-origin: center;
     transform: translateX(-50%) rotate(-45deg); /* Center the arrow line */
   }
@@ -56,7 +58,11 @@ h1 {
   .MxView,
   .MyView,
   .MxText,
-  .MyText {
+  .MyText,
+  .CoPxVis,
+  .CoPxText,
+  .CoPyVis,
+  .CoPyText {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,6 +74,51 @@ h1 {
     margin-left: 30px; /* Spacing between the text and views */
     width: 35%; /* Set width for the text section */
   }
+
+.CoPyFeet{
+    width: 100px;
+    height: 100px;
+}
+
+.CoPxVis {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the contents */
+  position: relative; /* Allow absolute positioning within */
+}
+  
+.pressure-container {
+  display: flex;
+  justify-content: space-between; /* Position pressure boxes side by side */
+  position: relative; /* Needed to position the feet image over the boxes */
+  width: 200px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+}
+  
+.pressure-box {
+  width: 100px; /* Adjust size */
+  height: 100px;
+  border-radius: 5px;
+  z-index: 1; /* Ensure boxes are below the image */
+}
+  
+.CoPxFeet {
+  position: absolute;
+  top: 0; /* Position the feet image at the top of the container */
+  left: 50%; /* Center the image horizontally */
+  transform: translateX(-50%); /* Offset by half its width to truly center */
+  width: 100px; /* Size of the feet image */
+  height: 100px;
+  z-index: 2; /* Ensure the image is on top of the boxes */
+  }
+  
+#pressureSlider {
+  margin-top: 20px; /* Space between the pressure boxes and slider */
+}
+
+
+
+
   
   
   

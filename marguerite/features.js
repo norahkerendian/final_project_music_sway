@@ -30,6 +30,57 @@ function rotatePersonMy() {
 }
 rotatePersonMy();
 
+const slider = document.getElementById("pressureSlider");
+const leftBox = document.getElementById("leftPressure");
+const rightBox = document.getElementById("rightPressure");
+
+// slider.addEventListener("input", () => {
+//   let value = slider.value;
+//   let intensity = Math.abs(value - 50) * 5; // Scale intensity, higher intensity = darker blue
+
+//   let leftColor, rightColor;
+
+//   if (value < 50) {
+//       // As the slider moves left, more pressure on the left, so left gets darker blue
+//       leftColor = `rgb(0, 0, ${255 - intensity})`; // Darker blue for more pressure on left
+//       rightColor = `rgb(0, 0, ${255})`; // Lighter blue for less pressure on the right
+//   } else {
+//       // As the slider moves right, more pressure on the right, so right gets darker blue
+//       leftColor = `rgb(0, 0, ${255})`; // Lighter blue for less pressure on the left
+//       rightColor = `rgb(0, 0, ${255 - intensity})`; // Darker blue for more pressure on the right
+//   }
+
+//   leftBox.style.backgroundColor = leftColor;
+//   rightBox.style.backgroundColor = rightColor;
+// });
+
+slider.addEventListener("input", () => {
+  let value = slider.value;
+  let intensity = Math.abs(value - 50) * 5; // Scale intensity, higher intensity = darker blue
+
+  let leftColor, rightColor;
+
+  if (value < 50) {
+      // As the slider moves left, more pressure on the left, so left gets darker blue
+      leftColor = `#0000${(255 - intensity).toString(16).padStart(2, '0')}`; // Darker blue for more pressure on left
+      rightColor = `#d3e2f0`; // Lighter blue for less pressure on the right
+  } else {
+      // As the slider moves right, more pressure on the right, so right gets darker blue
+      leftColor = `#d3e2f0`; // Lighter blue for less pressure on the left
+      rightColor = `#0000${(255 - intensity).toString(16).padStart(2, '0')}`; // Darker blue for more pressure on the right
+  }
+
+  leftBox.style.backgroundColor = leftColor;
+  rightBox.style.backgroundColor = rightColor;
+});
+
+
+
+
+
+
+
+
 
 
 
